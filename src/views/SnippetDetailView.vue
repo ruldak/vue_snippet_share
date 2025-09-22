@@ -101,10 +101,6 @@
               <div class="analytics-value">{{ analytics.total_views || 0 }}</div>
               <div class="analytics-label">Total Views</div>
             </div>
-            <div class="analytics-item">
-              <div class="analytics-value">{{ analytics.unique_visitors || 0 }}</div>
-              <div class="analytics-label">Unique Visitors</div>
-            </div>
           </div>          
         </div>
       </div>
