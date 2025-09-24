@@ -61,7 +61,10 @@
     </div>
 
     <div v-else-if="snippets.length === 0" class="empty-state">
-      <i class="fas fa-search empty-icon"></i>
+		<svg class="empty-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="1em" height="1em" role="img" aria-hidden="true" focusable="false" stroke="currentColor" fill="none" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+		  <circle cx="7" cy="7" r="4"></circle>
+		  <line x1="11.5" y1="11.5" x2="15" y2="15"></line>
+		</svg>
       <h3>No snippets found</h3>
       <p>Try adjusting your filters or search query</p>
     </div>
