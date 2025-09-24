@@ -78,3 +78,7 @@ This project is built with the following technologies:
     npm run build
     ```
     This will create a `dist` folder with the optimized production assets.
+	
+## Credits
+
+Favicon generated with [favicon-generator.org](https://www.favicon-generator.org/)
