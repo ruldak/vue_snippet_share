@@ -4,7 +4,7 @@ This is the Vue.js frontend for the **Snippet Share** application, a platform fo
 
 **Note:** This frontend was developed as a client for a more complex backend project. The primary focus of the overall project is the backend functionality, including API design, database management, and business logic. The frontend is a functional but simple interface to interact with the backend services.
 
-The corresponding backend project can be found here: **[Link to your backend project]**
+The corresponding backend project can be found here: [django_snippet_share](https://github.com/ruldak/django_snippet_share)
 
 ---
 
@@ -83,6 +83,6 @@ This project is built with the following technologies:
 
 Favicon generated with [favicon-generator.org](https://www.favicon-generator.org/)
 
-##️ ⚠ Note: Authentication system is for demo purposes only. 
+# ⚠ Note: Authentication system is for demo purposes only.
 All user data is stored securely (hashed passwords). 
 No sensitive data is collected.
