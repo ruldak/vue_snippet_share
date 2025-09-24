@@ -21,7 +21,7 @@ The corresponding backend project can be found here: **[Link to your backend pro
     *   Metadata including creator, creation date, language, and visibility.
     *   Copy-to-clipboard functionality.
 *   **Snippet Analytics:** If you are the owner, you can view basic analytics like total views.
-*   **Visibility Control:** Set your snippets to `public`  or `private`.
+*   **Visibility Control:** Set your snippets to `public`, `private`  or `unlisted`.
 *   **Snippet Expiration:** Set an expiration date for your snippets.
 
 ---
