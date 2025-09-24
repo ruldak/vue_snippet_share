@@ -48,9 +48,9 @@
               type="text"
               placeholder="Search snippets..."
             />
-            <i class="fas fa-search search-icon"></i>
 		  </div>
-		  <button @click="applyFilters()" class="button is-primary" style="margin-top: 0.5rem;">Search</button>        </div>
+		  <button @click="applyFilters()" class="button is-primary" style="margin-top: 0.5rem;">Search</button>
+		</div>
 
       </div>
     </div>
@@ -90,7 +90,11 @@
               {{ snippet.language }}
             </span>
             <span class="views-count">
-              <i class="fas fa-eye"></i>
+				<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 34 40" width="34" height="10" role="img" aria-labelledby="eye1Title">
+				  <title id="eye1Title">Eye (outline)</title>
+				  <path d="M2 20c8-10 20-16 30-16s22 6 30 16c-8 10-20 16-30 16S10 30 2 20z" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+				  <circle cx="32" cy="20" r="6" fill="currentColor"/>
+				</svg>
               {{ snippet.access_log_count || 0 }}
             </span>
             <span class="date">
@@ -101,7 +105,7 @@
             :to="`/snippets/${snippet.id}`"
             class="view-button"
           >
-            View Full Snippet
+            View More
           </router-link>
         </div>
       </div>
@@ -448,7 +452,6 @@ const formatRelativeTime = (dateString) => {
 
 .snippet-meta {
   display: flex;
-  gap: 0.5rem;
   align-items: center;
   flex-wrap: wrap;
 }
@@ -476,7 +479,12 @@ const formatRelativeTime = (dateString) => {
   color: #666;
   display: flex;
   align-items: center;
-  gap: 0.25rem;
+}
+
+.views-count::after {
+  content: "•"; /* bisa diganti "|" atau simbol lain */
+  margin: 0 0.5rem;
+  color: #999;
 }
 
 .view-button {
