@@ -82,3 +82,7 @@ This project is built with the following technologies:
 ## Credits
 
 Favicon generated with [favicon-generator.org](https://www.favicon-generator.org/)
+
+##️ ⚠ Note: Authentication system is for demo purposes only. 
+All user data is stored securely (hashed passwords). 
+No sensitive data is collected.

@@ -1,5 +1,11 @@
 <template>
   <div class="auth-container">
+  
+	<div>
+	  ⚠️ This authentication system is for demo purposes only. 
+	  Passwords are securely hashed and no sensitive data is collected.
+	</div>
+  
     <div class="auth-card">
       <h2 class="title">Create Account</h2>
       <form @submit.prevent="handleRegister">
@@ -162,6 +168,7 @@ const handleRegister = async () => {
 <style scoped>
 .auth-container {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   min-height: 100vh;
@@ -170,6 +177,7 @@ const handleRegister = async () => {
 }
 
 .auth-card {
+	margin-top: 30px;
   width: 100%;
   max-width: 400px;
   padding: 2rem;
