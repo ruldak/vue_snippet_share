@@ -53,6 +53,11 @@ body {
   .main-content {
     padding: 1rem;
   }
+  
+  footer > p {
+	font-size: .8rem;
+	width: 300px;
+  }
 }
 
 .button {
