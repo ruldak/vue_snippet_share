@@ -363,4 +363,31 @@ const formatDate = (dateString) => {
   text-align: center;
   padding: 2rem;
 }
+
+@media (max-width: 768px) {
+  .dashboard {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .snippet-card {
+    flex-direction: column;
+  }
+
+  .snippet-actions {
+    margin-top: 1rem;
+    align-self: flex-start;
+  }
+}
 </style>

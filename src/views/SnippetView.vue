@@ -418,5 +418,9 @@ const formatDate = (dateString) => {
   .snippet-actions {
     justify-content: flex-end;
   }
+  
+  .snippet-preview {
+	overflow: auto;
+  }
 }
 </style>

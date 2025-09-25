@@ -139,4 +139,14 @@ const handleLogin = async () => {
   margin-top: 1rem;
   padding: 1rem;
 }
+
+@media (max-width: 768px) {
+  .auth-container {
+    padding: 1rem;
+  }
+
+  .auth-card {
+    padding: 1.5rem;
+  }
+}
 </style>

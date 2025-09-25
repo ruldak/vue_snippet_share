@@ -19,15 +19,12 @@
           <h1 class="snippet-title">{{ snippet.title }}</h1>
           <div class="snippet-meta">
             <div class="meta-item">
-              <i class="fas fa-user"></i>
               <span>Created by {{ snippet.user }}</span>
             </div>
             <div class="meta-item">
-              <i class="fas fa-calendar"></i>
               <span>{{ formatDate(snippet.created_at) }}</span>
             </div>
             <div class="meta-item">
-              <i class="fas fa-tag"></i>
               <span v-if="snippet.language == 'django'" class="tag" :class="languageClass(snippet.language)">
                 {{ snippet.language }} template
               </span>
@@ -36,13 +33,11 @@
               </span>
             </div>
             <div class="meta-item">
-              <i class="fas fa-eye"></i>
               <span class="tag" :class="visibilityClass(snippet.visibility)">
                 {{ snippet.visibility }}
               </span>
             </div>
             <div v-if="snippet.expires_at" class="meta-item">
-              <i class="fas fa-clock"></i>
               <span>Expires {{ formatDate(snippet.expires_at) }}</span>
             </div>
             <div v-if="snippet.is_expired" class="meta-item">
@@ -56,7 +51,6 @@
             :to="`/snippets/${snippet.id}/edit`"
             class="button is-outlined is-primary"
           >
-            <i class="fas fa-edit"></i>
             Edit
           </router-link>
           <button
@@ -67,7 +61,6 @@
           >
             <span v-if="isDeleting">Deleting...</span>
             <span v-else>
-              <i class="fas fa-trash"></i>
               Delete
             </span>
           </button>
@@ -422,19 +415,41 @@ pre {
 }
 
 @media (max-width: 768px) {
+  .snippet-detail-view {
+    padding: 1rem;
+  }
+
   .snippet-header {
     flex-direction: column;
     gap: 1rem;
+    padding: 1.5rem;
   }
   
   .snippet-actions {
-    width: 100%;
-    justify-content: flex-end;
+    width: fit-content;
   }
   
   .snippet-meta {
     flex-direction: column;
     align-items: flex-start;
+    gap: 0.75rem;
+  }
+
+  .code-section,
+  .analytics-section {
+    padding: 1.5rem;
+  }
+
+  .snippet-title {
+    font-size: 1rem;
+  }
+  
+  .meta-item {
+	font-size: .7rem;
+  }
+  
+  .code-container {
+	font-size: .5rem;
   }
 }
 </style>

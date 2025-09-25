@@ -46,6 +46,12 @@ body {
   min-height: calc(100vh - 80px);
 }
 
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+}
+
 .button {
   padding: 0.5rem 1rem;
   border: 1px solid #dbdbdb;

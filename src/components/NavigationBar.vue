@@ -2,8 +2,20 @@
   <nav class="navbar">
     <div class="navbar-brand">
       <router-link to="/" class="navbar-item">Snippet Share</router-link>
+      <a
+        role="button"
+        class="navbar-burger"
+        :class="{ 'is-active': isMenuOpen }"
+        @click="toggleMenu"
+        aria-label="menu"
+        aria-expanded="false"
+      >
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </a>
     </div>
-    <div class="navbar-menu">
+    <div class="navbar-menu" :class="{ 'is-active': isMenuOpen }">
       <div class="navbar-start">
         <router-link to="/" class="navbar-item">Dashboard</router-link>
         <router-link to="/snippets" class="navbar-item">My Snippets</router-link>
@@ -31,7 +43,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useAuthStore } from '../store/auth'
 
@@ -39,6 +51,11 @@ const authStore = useAuthStore()
 const router = useRouter()
 
 const isAuthenticated = computed(() => authStore.isAuthenticated)
+const isMenuOpen = ref(false)
+
+const toggleMenu = () => {
+  isMenuOpen.value = !isMenuOpen.value
+}
 
 const logout = () => {
   authStore.logout()
@@ -48,6 +65,7 @@ const logout = () => {
 
 <style scoped>
 .navbar {
+  position: relative; /* Add this */
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -59,6 +77,24 @@ const logout = () => {
 .navbar-brand {
   font-weight: bold;
   font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.navbar-burger {
+  display: none;
+  cursor: pointer;
+}
+
+.navbar-burger span {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px;
+  background-color: #363636;
+  transition: all 0.3s;
 }
 
 .navbar-menu {
@@ -89,5 +125,45 @@ const logout = () => {
 .buttons {
   display: flex;
   gap: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .navbar-burger {
+    display: block;
+  }
+
+  .navbar-menu {
+    z-index: 10; /* Add this */
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 100%;
+    width: 100%;
+    background-color: #f5f5f5;
+    flex-direction: column;
+    padding: 1rem;
+    border-bottom: 1px solid #e5e5e5;
+  }
+
+  .navbar-menu.is-active {
+    display: flex;
+  }
+
+  .navbar-start {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+  }
+
+  .navbar-end {
+    flex-direction: column;
+    gap: 1rem;
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .buttons {
+    flex-direction: column;
+  }
 }
 </style>
