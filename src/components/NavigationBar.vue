@@ -99,6 +99,8 @@ const logout = () => {
 
 .navbar-menu {
   display: flex;
+  width: 1500px;
+  font-size: 1rem;
 }
 
 .navbar-start {
