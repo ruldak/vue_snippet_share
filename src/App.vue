@@ -4,6 +4,9 @@
     <main class="main-content">
       <router-view />
     </main>
+	<footer>
+      <p>Made with ❤️ by <a href="https://github.com/ruldak" target="_blank">Hari Cahyono</a> - <a href="https://github.com/ruldak/vue_snippet_share" target="_blank">See the repository</a></p>
+    </footer>
   </div>
 </template>
 
@@ -186,5 +189,10 @@ body {
 .select select {
   appearance: none;
   padding-right: 2.5rem;
+}
+
+footer {
+  width: fit-content;
+  margin: 0 auto 30px auto;
 }
 </style>
